@@ -1,25 +1,37 @@
+/* 
+Project Name: JG Photography
+Client: Jeremy Giampaoli
+Author: Mitch Grove
+*/
 
-.carousel .carousel-control {
- 	opacity: 0;
+/*----------------------------------------------------------------------------- 
+01=BASE   
+-----------------------------------------------------------------------------*/
+
+/* Box Model Hack */
+* {
+     -moz-box-sizing: border-box; /* Firexfox */
+     -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+     box-sizing: border-box; /* IE */
+}
+
+.clear {
+	clear: both;
+}
+
+html,body {
+	height:100%;
 }
 
 
-.carousel .carousel-control:hover { 
-	opacity: 1; 
+img {
+	margin: 0;
+	float: left;
 }
 
-
-
-.carousel-control.left, .carousel-control.right {
-	background-image: none;
-}
-
-
-.logo {
-	padding-top: 13px;
-}
-
-
+/*----------------------------------------------------------------------------- 
+02=Navbar  
+-----------------------------------------------------------------------------*/
 .navbar {
 	position: absolute;
 }
@@ -40,11 +52,41 @@
 	color: white;
 }
 
+.logo {
+	padding-top: 13px;
+}
+
+/*----------------------------------------------------------------------------- 
+03=Background 
+-----------------------------------------------------------------------------*/
+
+
+#pictures-background {
+	background:
+		linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+	 	url(../assets/images/carousel_img2.jpg);
+	background-size: cover;
+	moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+}
+#contact-background {
+	background: 
+		linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+		url(../assets/images/carousel_img3.jpg);
+	background-size: cover;
+    moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+}
+
+
+/*----------------------------------------------------------------------------- 
+04=Carousel 
+-----------------------------------------------------------------------------*/
+
 /* Set carousel to fullscreen */
 
-html,body {
-	height:100%;
-}
 .carousel,.item,.active {
 	height:100%;
 }
@@ -52,42 +94,41 @@ html,body {
 	height:100%;
 }
 
+.carousel .carousel-control {
+ 	opacity: 0;
+}
 
 
-.footer-social {
+.carousel .carousel-control:hover { 
+	opacity: 1; 
+}
+
+
+
+.carousel-control.left, .carousel-control.right {
+	background-image: none;
+}
+
+/*----------------------------------------------------------------------------- 
+05=Lightbox
+-----------------------------------------------------------------------------*/
+
+
+.contact-container {
 	width: 100%;
-	height: 50px;
-	margin-top: 50px;
-	position: absolute;
-	bottom: 0;
-
-}
-
-.footer-icons-container {
-	margin-left: 20px;
-}
-
-.fa-stack {
-	color: #bdc3c7;
-}
-
-.fa-stack:hover {
-	color: white;
-}
-
-.container-not-main {
-	width: 100%;
-	/*height: 100%;*/
+	height: 100%;
 	background-image: 
 		linear-gradient(
       	rgba(0, 0, 0, 0.6), 
       	rgba(0, 0, 0, 0.6)
     	),
-		url(../assets/images/carousel_img2.jpg);
-	background-size:     cover;
-    background-repeat:   no-repeat;
-    background-position: center center; 
+		url(../assets/images/carousel_img3.jpg) no-repeat center center fixed;
+	background-size: cover;
+    moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
 }
+
 
 .lightbox-container
 {
@@ -103,6 +144,39 @@ html,body {
 	margin: 0;
 }
 
-footer {
-	background: transparent;
+
+
+/*----------------------------------------------------------------------------- 
+06=Footer 
+-----------------------------------------------------------------------------*/
+
+#contact-footer {
+	bottom: 0;
+	position: absolute;
 }
+
+/* Footer for carousel page only */
+
+.carousel-footer {
+	width: 100%;
+	height: 50px;
+	margin-top: 50px;
+	position: absolute;
+	bottom: 0;
+
+}
+
+
+.footer-icons-container {
+	margin-left: 20px;
+}
+
+.fa-stack {
+	color: #bdc3c7;
+}
+
+.fa-stack:hover {
+	color: white;
+}
+
+
